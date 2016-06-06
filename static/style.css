@@ -1,0 +1,67 @@
+body {
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+  justify-content: center;
+}
+
+.button {
+    background-color: #009999; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+
+input[type=submit] {
+		display: inline-flex;
+    padding:5px 15px;
+    background-color: #009999; /* Green */
+		color: white;
+    border:0 none;
+    cursor:pointer;
+		margin: 20px;
+		text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+		align-itemsß: center;
+}
+
+
+thead {
+  background: #395870;
+  color: #fff;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+   border: 1px solid black;
+}
+
+th {
+    height: 40px;
+		text-align: left;
+}
+
+td {
+    height: 25px;
+    vertical-align: bottom;
+		border-bottom: 1px solid #cecfd5;
+  	border-right: 1px solid #cecfd5;
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+}
+
+td:first-child {
+  border-left: 1px solid #cecfd5;
+}
+
+tbody tr:nth-child(even) {background-color: #f2f2f2}

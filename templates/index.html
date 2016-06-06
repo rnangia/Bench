@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel=stylesheet type=text/css href={{ url_for('static', filename='style.css') }}>
+  <title> restTest </title>
+  <h1>restTest</h1>
+  </head>
+  <body>
+    <form action="{{ url_for('dispTransactions') }}" method="post">
+      <input type="radio" name="options" id="all" value="all"> All Transactions </input><br>
+      <input type="radio" name="options" id="clean" value="clean"> Clean Transactions </input><br>
+      <input type="radio" name="options" id="clean" value="sortByLedger"> Clean Transactions + Totals by Category + List of Transactions </input><br>
+      <input type="radio" name="options" id="clean" value="sortByDate"> Clean Transactions + Running balance per day  </input><br>
+      <input type="radio" name="options" id="dup" value="duplicate"> Duplicate transactions </input><br>
+      <input type="submit" name="submit" value="submit">
+    </form>
+  </body>
+</html>

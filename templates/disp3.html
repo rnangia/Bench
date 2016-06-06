@@ -1,0 +1,44 @@
+<!doctype html>
+<title>Flaskr</title>
+<link rel=stylesheet type=text/css href={{ url_for('static', filename='style.css') }}>
+<div class=page>
+  <h1>Balance</h1>
+  {% block body %}
+  <div class=entries>
+    <h2> {{ disp }} </h2>
+    <h3><label> Current Balance</label> {{ balance }} </h3>
+    <table>
+    <thead>
+    <tr>
+      <th> Ledger  </th>
+      <th> Date    </th>
+      <th> Company </th>
+      <th> Balance </th>
+    </tr>
+    <thead>
+    <tbody>
+    {% for entry in entries %}
+      <tr>
+          <td> {{ entry['ledger'] }}</td>
+          <td> </td>
+          <td> </td>
+          <td> {{ entry['balance'] }}</td>
+      </tr>
+      {% for row in data %}
+        {% if row['ledger'] == entry['ledger'] %}
+        <tr>
+            <td>  </td>
+            <td> {{ row['date'] }} </td>
+            <td> {{ row['company'] }} </td>
+            <td> {{ row['balance'] }}</td>
+        </tr>
+        {% endif %}
+      {% endfor %}
+    {% else %}
+    <div><em>Unbelievable.  No entries here so far</em></div>
+    {% endfor %}
+    </tbody>
+  </table>
+  </div>
+  {% endblock %}
+</div>
